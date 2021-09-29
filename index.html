@@ -30,16 +30,16 @@
     </div>
     <div class="game_cont">
         <div class="play_area">
-            <img src="assets/start_hand_left.svg" alt="Players hand">
+            <img src="assets/start_hand_left.svg" alt="Players hand" id="you_playing_hand">
         </div>
         <div class="play_area">
-            <img src="assets/start_hand_right.svg" alt="Players hand">
+            <img src="assets/start_hand_right.svg" alt="Players hand" id="computer_playing_hand">
         </div>
     </div>
     <div class="controls_cont">
-        <button class="control_btn" id="rock">Rock</button>
-        <button class="control_btn" id="paper">Paper</button>
-        <button class="control_btn" id="scissors">Scissors</button>
+        <button class="control_btn" id="rock" onclick="play('rock')">Rock</button>
+        <button class="control_btn" id="paper" onclick="play('paper')">Paper</button>
+        <button class="control_btn" id="scissors" onclick="play('scissors')">Scissors</button>
     </div>
     
 </body>
