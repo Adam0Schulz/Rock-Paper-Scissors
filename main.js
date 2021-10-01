@@ -59,12 +59,12 @@ const game = (plChoice) => {
             });
         });
     };
+    
 
-
+    animation();
     setTimeout(() => {
         compareHands();
         updateScore();
     }, 1500)
 
-    animation();
 }
