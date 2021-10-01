@@ -57,6 +57,9 @@ const game = (plChoice) => {
             hand.addEventListener('animationend', () => {
                 hand.style.animation = "";
             });
+            hand.addEventListener('animationstart', () => {
+                hand.src = "assets/rock.svg";
+            });
         });
     };
     
