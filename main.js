@@ -49,6 +49,22 @@ const game = (plChoice) => {
         computerScoreElem.innerText = parseInt(computerScoreElem.innerText) + computerScore;
     };
 
-    compareHands();
-    updateScore();
+    const animation = () => {
+        const hands = document.querySelectorAll('.player_hand');
+
+        hands.forEach((hand) => {
+            hand.style.animation = "handAnimation 1.5s ease-in"
+            hand.addEventListener('animationend', () => {
+                hand.style.animation = "";
+            });
+        });
+    };
+
+
+    setTimeout(() => {
+        compareHands();
+        updateScore();
+    }, 1500)
+
+    animation();
 }

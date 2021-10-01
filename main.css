@@ -129,3 +129,27 @@ body {
 .control_btn:active {
   border: 2px solid var(--secondary-color);
 }
+
+@keyframes handAnimation {
+  0% {
+    bottom: 0;
+  }
+  16% {
+    bottom: 80px;
+  }
+  33% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 80px;
+  }
+  66% {
+    bottom: 0;
+  }
+  83% {
+    bottom: 80px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
