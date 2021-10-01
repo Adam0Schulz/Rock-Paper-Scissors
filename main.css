@@ -77,12 +77,29 @@ body {
 
 .game_cont {
   width: 50vw;
-  margin: 7em 0;
+  margin: 4em 0;
   display: flex;
   justify-content: space-between;
 }
 
 .play_area {
+  height: 200px;
+  width: 100px;
+  position: relative;
+}
+
+.player_hand {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+}
+
+#you_playing_hand {
+  transform: rotateZ(90deg);
+}
+
+#computer_playing_hand {
+  transform: scaleX(-1) rotateZ(90deg);
 }
 
 .controls_cont {

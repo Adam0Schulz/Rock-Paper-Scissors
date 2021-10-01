@@ -1,20 +1,54 @@
-const youScoreElem = document.getElementById('you_player_score')
-const computerScoreElem = document.getElementById('computer_player_score')
-let youScore = 0;
-let computerScore = 0;
+const randomChoice = () => {
+    const possibleChoices = ['rock', 'paper', 'scissors'];
+    const randInt = Math.floor(Math.random() * 3);
+    const randChoice = possibleChoices[randInt];
+    return randChoice;
+};
 
-const youHand = document.getElementById('you_playing_hand')
-const computerHand = document.getElementById('computer_playing_hand')
+const game = (plChoice) => {
+ 
+    let youScore = 0;
+    let computerScore = 0;
+    const computerChoice = randomChoice()   
 
-let i = 0
-function play(move) {
-    let interval = setInterval(() => {
-        if (i == 100) {
-            clearInterval(interval);
-        } else {
-            console.log('hello world')
-            i++
+    const compareHands = () => {
+        const youHand = document.getElementById('you_playing_hand');
+        const computerHand = document.getElementById('computer_playing_hand');
+
+        youHand.src = 'assets/' + plChoice + '.svg';
+        computerHand.src = 'assets/' + computerChoice + '.svg';
+    };
+
+    const updateScore = () => {
+        const youScoreElem = document.getElementById('you_player_score');
+        const computerScoreElem = document.getElementById('computer_player_score');
+
+        if (plChoice == computerChoice) {
+            console.log("it's a tie")
+        } else if (plChoice == 'rock') {
+            if (computerChoice == 'paper') {
+                computerScore++
+            } else if (computerChoice == 'scissors') {
+                youScore++
+            }
+        } else if (plChoice == 'paper') {
+            if (computerChoice == 'rock') {
+                youScore++
+            } else if (computerChoice == 'scissors') {
+                computerScore++
+            }
+        } else if (plChoice == 'scissors') {
+            if (computerChoice == 'rock') {
+                computerScore++
+            } else if (computerChoice == 'paper') {
+                youScore++
+            }
         }
-    },1000)
 
+        youScoreElem.innerText = parseInt(youScoreElem.innerText) + youScore;
+        computerScoreElem.innerText = parseInt(computerScoreElem.innerText) + computerScore;
+    };
+
+    compareHands();
+    updateScore();
 }
