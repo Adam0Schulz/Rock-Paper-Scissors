@@ -96,15 +96,18 @@ body {
 
 #you_playing_hand {
   transform: rotateZ(90deg);
+  left: 0;
 }
 
 #computer_playing_hand {
   transform: scaleX(-1) rotateZ(90deg);
+  right: 0;
 }
 
 .controls_cont {
   width: 50vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 

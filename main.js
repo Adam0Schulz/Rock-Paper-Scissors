@@ -1,5 +1,5 @@
 const randomChoice = () => {
-    const possibleChoices = ['rock', 'paper', 'scissors'];
+    const possibleChoices = [0 , 1 , 2];
     const randInt = Math.floor(Math.random() * 3);
     const randChoice = possibleChoices[randInt];
     return randChoice;
@@ -23,7 +23,7 @@ const game = (plChoice) => {
         const youScoreElem = document.getElementById('you_player_score');
         const computerScoreElem = document.getElementById('computer_player_score');
 
-        if (plChoice == computerChoice) {
+        /*if (plChoice == computerChoice) {
             console.log("it's a tie")
         } else if (plChoice == 'rock') {
             if (computerChoice == 'paper') {
@@ -43,7 +43,17 @@ const game = (plChoice) => {
             } else if (computerChoice == 'paper') {
                 youScore++
             }
+        }*/
+
+
+        if (plChoice == computerChoice) {
+            console.log("It's a tie")
+        } else if ((plChoice + 1) % 3 == computerChoice % 3) {
+            computerScore++
+        } else {
+            youScore++
         }
+
 
         youScoreElem.innerText = parseInt(youScoreElem.innerText) + youScore;
         computerScoreElem.innerText = parseInt(computerScoreElem.innerText) + computerScore;
@@ -58,7 +68,7 @@ const game = (plChoice) => {
                 hand.style.animation = "";
             });
             hand.addEventListener('animationstart', () => {
-                hand.src = "assets/rock.svg";
+                hand.src = "assets/0.svg";
             });
         });
     };
