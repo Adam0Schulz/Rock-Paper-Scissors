@@ -164,6 +164,10 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
+  body {
+    height: 130vh;
+  }
+
   .main_title_cont {
     margin: 6em 0 3em 0;
   }
