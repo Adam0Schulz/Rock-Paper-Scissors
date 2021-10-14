@@ -23,28 +23,6 @@ const game = (plChoice) => {
         const youScoreElem = document.getElementById('you_player_score');
         const computerScoreElem = document.getElementById('computer_player_score');
 
-        /*if (plChoice == computerChoice) {
-            console.log("it's a tie")
-        } else if (plChoice == 'rock') {
-            if (computerChoice == 'paper') {
-                computerScore++
-            } else if (computerChoice == 'scissors') {
-                youScore++
-            }
-        } else if (plChoice == 'paper') {
-            if (computerChoice == 'rock') {
-                youScore++
-            } else if (computerChoice == 'scissors') {
-                computerScore++
-            }
-        } else if (plChoice == 'scissors') {
-            if (computerChoice == 'rock') {
-                computerScore++
-            } else if (computerChoice == 'paper') {
-                youScore++
-            }
-        }*/
-
 
         if (plChoice == computerChoice) {
             console.log("It's a tie")
